@@ -1,14 +1,4 @@
 /* topbar */
-.topbar__container {
-  height: 50px;
-  width: 100%;
-  background-color: #ff6741;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
 
 .topbar__left {
   flex: 3;
@@ -20,10 +10,7 @@
 
 .topbar__right {
   flex: 4;
-  display: flex;
-  align-items: center;
   justify-content: space-around;
-  color: white;
 }
 
 .topbar__link {

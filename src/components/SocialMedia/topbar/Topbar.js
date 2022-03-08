@@ -5,37 +5,37 @@ import { Link } from "react-router-dom";
 
 function TopBar() {
   return (
-    <div className="topbar__container">
+    <div className="h-16 w-full bg-red-700 flex items-center sticky top-0 z-50">
       <div className="topbar__left">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Diarium</span>
+        <Link to="/" no-underline>
+          <span className="text-lg m-4 font-bold text-white cursor-pointer">Diarium</span>
         </Link>
       </div>
       <div className="topbar__center">
-        <div className="topbar__searchbar">
-          <Search className="topbar__searchicon" />
-          {/* <input
+        <div className="w-full h-10 bg-white rounded flex items-center">
+          <Search className="text-base m-2" />
+          <input
             type="text"
             placeholder="Search for friend, post or video"
-            className="topbar__searchinput"
-          /> */}
+            className="border-none w-3/4"
+          />
         </div>
       </div>
-      <div className="topbar__right">
-        <div className="topbar__links">
-          <span className="topbar__link">Homepage</span>
-          <span className="topbar__link">Timeline</span>
+      <div className="topbar__right flex text-white items-center justify-around">
+        <div className="">
+          <span className="mr-4 text-sm cursor-pointer">Homepage</span>
+          <span className="mr-4 text-sm cursor-pointer">Timeline</span>
         </div>
-        <div className="topbar__icon">
-          <div className="topbar__icon-item">
+        <div className="flex">
+          <div className="mr-4 cursor-pointer relative">
             <Person />
             <span className="topbar__icon-badge">1</span>
           </div>
-          <div className="topbar__icon-item">
+          <div className="mr-4 cursor-pointer relative">
             <Chat />
             <span className="topbar__icon-badge">1</span>
           </div>
-          <div className="topbar__icon-item">
+          <div className="mr-4 cursor-pointer relative">
             <Notifications />
             <span className="topbar__icon-badge">1</span>
           </div>
