@@ -3,6 +3,7 @@ const interceptorAxios = axios.create({
 //   baseURL: `${
 //     process.env.REACT_APP_NAME === "dev" ? process.env.REACT_APP_DEV : process.env.REACT_APP_PROD
 //   }`
+baseURL:"https://gorest.co.in/public/v2"
 });
 
 interceptorAxios.interceptors.request.use(
