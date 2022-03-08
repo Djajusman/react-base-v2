@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // components
-import axios from "utils/axios";
+import { getUserList } from "api";
 
 export default function CardTable({ color }) {
   const [listUsers, setListUsers] = useState([]);
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios
-        .get("/users")
-        .then(() => {
-          setListUsers(res.data);
+      getUserList()
+        .then((res) => {
+          let tempList = [];
+          tempList = res.data;
+          console.log("List Data User => ", tempList);
+          setListUsers(tempList);
           localStorage.setItem("users", JSON.stringify(res.data));
         })
         .catch((error) => {
